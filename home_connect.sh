@@ -45,8 +45,9 @@ then
   exit 1
 elif [ $host == 7 ]
 then
-  openvpn --config ags.ovpn &
-  echo "VPN Connection Open"
+  echo "Do not close this session"
+  echo "Input VPN username and password"
+  openvpn --config ags.ovpn 
   exit 1
 elif [ $host == 8 ]
 then
