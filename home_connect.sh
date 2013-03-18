@@ -1,5 +1,5 @@
 #################################################
-# home_connect.sh					#
+# home_connect.sh				#
 # Connect to selected server    		#
 # AGS - Bart Agreda				#
 # ver. 1.0 03/17/2013				#
