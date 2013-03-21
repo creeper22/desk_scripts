@@ -39,7 +39,7 @@ then
   exit 1
 elif [ $host == 6 ]
 then
-  ssh root@agsi_server -i /home/bart/.ssh/id_rsa
+  ssh root@agsi-server -i /home/bart/.ssh/id_rsa
   exit 1
 else
   echo "Please select a valid input"
