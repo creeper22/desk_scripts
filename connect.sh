@@ -13,6 +13,7 @@ echo "   [3] tss_en"
 echo "   [4] tss_kr(AWS)"
 echo "   [5] tss_kr(KT)"
 echo "   [6] agsi_server"
+echo "   [7] tss_hlok"
 echo ""
 echo "Please choose the server to connect to:"
 read host
@@ -40,6 +41,10 @@ then
 elif [ $host == 6 ]
 then
   ssh root@agsi-server -i /home/bart/.ssh/id_rsa
+  exit 1
+elif [ $host == 7 ]
+then
+  ssh root@tss_hlok -p 10022 -i /home/bart/.ssh/tss_hlok.pem
   exit 1
 else
   echo "Please select a valid input"
