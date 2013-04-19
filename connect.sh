@@ -24,7 +24,7 @@ then
   exit 1
 elif [ $host == 2 ]
 then
-  ssh root@tss_enm -p 10022 -i /home/bart/.ssh/tss_enm.pem
+  ssh root@211.125.93.44 -p 10022 -i /Users/bart/Downloads/tss-enm.pem
   exit 1
 elif [ $host == 3 ]
 then
