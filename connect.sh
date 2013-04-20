@@ -9,7 +9,7 @@ clear
 echo "World Server Selection"
 echo "   [1] tss_cn"
 echo "   [2] tss_enm"
-echo "   [3] tss_en"
+echo "   [3] tss_blok"
 echo "   [4] tss_kr(AWS)"
 echo "   [5] tss_kr(KT)"
 echo "   [6] agsi_server"
@@ -20,15 +20,15 @@ read host
 
 if [ $host == 1 ]
 then
-  ssh root@tss_cn -p 10022 -i /home/bart/.ssh/tss_cn.pem
+  ssh root@14.63.161.130 -i /Users/bart/.keys/tss-cn.pem
   exit 1
 elif [ $host == 2 ]
 then
-  ssh root@211.125.93.44 -p 10022 -i /Users/bart/Downloads/tss-enm.pem
+  ssh root@211.125.93.44 -p 10022 -i /Users/bart/.keys/tss-enm.pem
   exit 1
 elif [ $host == 3 ]
 then
-  ssh root@tss_en -i /home/bart/.ssh/tss_en.pem
+  ssh root@211.11.101.136 -p 10022 -i /Users/bart/.keys/tss-blok.pem
   exit 1
 elif [ $host == 4 ]
 then
