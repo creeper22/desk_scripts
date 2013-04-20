@@ -2,7 +2,7 @@
 # home_connect.sh				#
 # Connect to selected server    		#
 # AGS - Bart Agreda				#
-# ver. 1.0 03/17/2013				#
+# ver. 2.0 04/20/2013				#
 #################################################
 #!/bin/bash
 clear
