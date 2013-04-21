@@ -1,50 +1,56 @@
 #################################################
-# connect.sh					#
+# home_connect.sh				#
 # Connect to selected server    		#
 # AGS - Bart Agreda				#
-# ver. 1.0 02/28/2013				#
+# ver. 2.0 04/20/2013				#
 #################################################
 #!/bin/bash
 clear
 echo "World Server Selection"
 echo "   [1] tss_cn"
 echo "   [2] tss_enm"
-echo "   [3] tss_blok"
-echo "   [4] tss_kr(AWS)"
-echo "   [5] tss_kr(KT)"
-echo "   [6] agsi_server"
-echo "   [7] tss_hlok"
+echo "   [3] tss_hlok"
+echo "   [4] tss_blok"
+echo "   [5] tss_lok"
+echo "   [6] tss_kr(AWS)"
+echo "   [7] tss_kr(KT)"
+echo "   [8] agsi_server"
+echo "   [9] open tunnel"
 echo ""
-echo "Please choose the server to connect to:"
+echo "Please choose the server to connect or task to do:"
 read host
 
 if [ $host == 1 ]
 then
-  ssh root@14.63.161.130 -i /Users/bart/.keys/tss-cn.pem
+  ssh root@tss-cn -p 10022 -i /sers/bart/.keys/tss-cn.pem
   exit 1
 elif [ $host == 2 ]
 then
-  ssh root@211.125.93.44 -p 10022 -i /Users/bart/.keys/tss-enm.pem
+  ssh root@tss-enm -p 10022 -i /Users/bart/.keys/tss-enm.pem
   exit 1
 elif [ $host == 3 ]
 then
-  ssh root@211.11.101.136 -p 10022 -i /Users/bart/.keys/tss-blok.pem
+  ssh root@tss-hlok -p 10022 -i /Users/bart/.keys/tss-hlok.pem
   exit 1
 elif [ $host == 4 ]
 then
-  ssh root@tss_kr\(AWS\) -i /home/bart/.ssh/tss_kr.pem
+  ssh root@tss-blok -p 10022 -i /Users/bart/.keys/tss-blok.pem
   exit 1
 elif [ $host == 5 ]
 then
-  ssh root@tss_kr\(KT\) -i /home/bart/.ssh/tss_kr.pem
+  ssh root@tss-lok -p 10022 -i /Users/bart/.keys/tss.pem
   exit 1
 elif [ $host == 6 ]
 then
-  ssh root@agsi-server -i /home/bart/.ssh/id_rsa
+  ssh root@tss-kr-aws -i /Users/bart/.keys/tss-kr.pem
   exit 1
 elif [ $host == 7 ]
 then
-  ssh root@tss_hlok -p 10022 -i /home/bart/.ssh/tss_hlok.pem
+  ssh root@tss-kr-kt -i /Users/bart/.keys/tss-kr.pem
+  exit 1
+elif [ $host == 8 ]
+then
+  ssh root@agsi_server -i /Users/bart/.keys/agsi-bart2.pem
   exit 1
 else
   echo "Please select a valid input"
