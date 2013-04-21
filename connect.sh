@@ -15,7 +15,6 @@ echo "   [5] tss_lok"
 echo "   [6] tss_kr(AWS)"
 echo "   [7] tss_kr(KT)"
 echo "   [8] agsi_server"
-echo "   [9] open tunnel"
 echo ""
 echo "Please choose the server to connect or task to do:"
 read host
