@@ -21,7 +21,7 @@ read host
 
 if [ $host == 1 ]
 then
-  ssh root@tss-cn -p 10022 -i /sers/bart/.keys/tss-cn.pem
+  ssh root@tss-cn -p 10022 -i /Users/bart/.keys/tss-cn.pem
   exit 1
 elif [ $host == 2 ]
 then
