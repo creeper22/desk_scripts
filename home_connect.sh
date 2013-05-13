@@ -27,10 +27,12 @@ then
 elif [ $host == 2 ]
 then
   ssh root@127.0.0.1 -p 10021 -i /Users/bart/.keys/tss-enm.pem
+  #ssh root@211.125.93.44 -p 10022 -i /Users/bart/.keys/tss-enm.pem
   exit 1
 elif [ $host == 3 ]
 then
   ssh root@127.0.0.1 -p 10022 -i /Users/bart/.keys/tss-hlok.pem
+  #ssh root@157.7.149.104 -p 10022 -i /Users/bart/.keys/tss-hlok.pem
   exit 1
 elif [ $host == 4 ]
 then
